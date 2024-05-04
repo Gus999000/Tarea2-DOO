@@ -1,0 +1,7 @@
+/*Clase Nota
+ * @author Gustavo González
+ * @version versión 1, 04 de mayo 2024*/
+public class Nota {
+    /*String para almacenar el contenido de la nota*/
+    private String contenido;
+}
