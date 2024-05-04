@@ -1,0 +1,8 @@
+/*Clase enumeración tipoReunion
+ * @author Gustavo González
+ * @version versión 1, 03 de mayo 2024*/
+enum tipoReunion {
+    TECNICA,
+    MARKETING,
+    OTRO;
+}
