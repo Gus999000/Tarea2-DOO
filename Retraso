@@ -1,0 +1,8 @@
+/*Clase Retraso
+ * @author Gustavo González
+ * @version versión 1, 03 de mayo 2024*/
+import java.time.Instant;
+public class Retraso {
+    /*Instant para almacenar la hora del retraso*/
+    private Instant hora;
+}
