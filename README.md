@@ -1,1 +1,3 @@
-# Tarea2-DOO
+Nombres:
+Gustavo Alonso Benítez Céspedes
+Gustavo Alonso González Anabalón
