@@ -1,10 +1,14 @@
 /**Clase para registrar retrasos
  * @author Gustavo González
- * @version versión 2, 12 de mayo 2024*/
+ * @version versión 3, 12 de mayo 2024*/
 import java.time.Instant;
 public class Retraso {
     /**Instant para almacenar la hora del retraso*/
     private Instant hora;
+    /**Constructor de Retraso, usa Instant.now() para definir la hora en el instante de tiempo*/
+    public Retraso() {
+        this.hora = Instant.now();
+    }
     /**Getter de la hora del retraso
      * @return hora del retraso*/
     public Instant getHora() {
