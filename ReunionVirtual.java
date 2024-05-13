@@ -1,6 +1,6 @@
 /**Reunión virtual asociada a un enlace
  * @author Gustavo González
- * @version versión 1, 12 de mayo 2024*/
+ * @version versión 2, 13 de mayo 2024*/
 public class ReunionVirtual extends Reunion {
     /**String para almacenar el enlace de la reunión*/
     private String enlace;
@@ -18,9 +18,5 @@ public class ReunionVirtual extends Reunion {
      * @param enlace String*/
     public void setEnlace(String enlace) {
         this.enlace = enlace;
-    }
-    /**@Override*/
-    public String toString() {
-        return enlace;
     }
 }
