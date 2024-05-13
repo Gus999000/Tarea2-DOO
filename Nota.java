@@ -1,6 +1,6 @@
 /**Nota que se puede añadir a una reunión
  * @author Gustavo González
- * @version versión 3, 12 de mayo 2024*/
+ * @version versión 4, 13 de mayo 2024*/
 public class Nota {
     /**String para almacenar el contenido de la nota*/
     private String contenido;
@@ -18,9 +18,5 @@ public class Nota {
      * @param contenido String*/
     public void setContenido(String contenido) {
         this.contenido = contenido;
-    }
-    /**@Override*/
-    public String toString() {
-        return contenido;
     }
 }
