@@ -1,6 +1,6 @@
 /**Departamento de empleados
  * @author Gustavo González
- * @version versión 1, 13 de mayo 2024*/
+ * @version versión 2, 13 de mayo 2024*/
 public class Departamento {
     /**Nombre del departamento*/
     private String nombre;
