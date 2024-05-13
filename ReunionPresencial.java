@@ -1,6 +1,6 @@
 /**Reunión presencial en una sala
  * @author Gustavo González
- * @version versión 1, 12 de mayo 2024*/
+ * @version versión 2, 13 de mayo 2024*/
 public class ReunionPresencial extends Reunion {
     /**String para almacenar la sala de la reunión*/
     private String sala;
@@ -18,9 +18,5 @@ public class ReunionPresencial extends Reunion {
      * @param sala String*/
     public void setSala(String sala) {
         this.sala = sala;
-    }
-    /**@Override*/
-    public String toString() {
-        return sala;
     }
 }
