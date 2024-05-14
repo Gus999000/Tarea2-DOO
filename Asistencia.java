@@ -1,6 +1,6 @@
 /**Confirmación de asistencia a la reunión
  * @author Gustavo González
- * @version versión 1, 14 de mayo 2024*/
+ * @version versión 2, 14 de mayo 2024*/
 public class Asistencia {
     /**Boolean que confirma la asistencia a la reunión*/
     private boolean Asistencia;
@@ -25,6 +25,6 @@ public class Asistencia {
     }
     @Override
     public String toString() {
-        return Boolean.toString(Asistencia);
+        return "Asistencia: " + Boolean.toString(Asistencia);
     }
 }
