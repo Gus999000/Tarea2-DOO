@@ -3,7 +3,7 @@ import java.time.Instant;
 import java.time.Duration;
 /**Reunión virtual asociada a un enlace
  * @author Gustavo González
- * @version versión 4, 14 de mayo 2024*/
+ * @version versión 5, 14 de mayo 2024*/
 public class ReunionVirtual extends Reunion {
     /**String para almacenar el enlace de la reunión*/
     private String enlace;
