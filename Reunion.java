@@ -11,7 +11,7 @@ abstract class Reunion {
     /**Empleado organizador de la reunión*/
     protected Empleado organizador;
     /**Tipo de reunión*/
-    protected String tipoReunion;
+    protected tipoReunion tipoReunion;
     /**Date para almacenar la fecha*/
     protected Date fecha;
     /**Instant para almacenar la hora prevista de inicio*/
@@ -28,11 +28,11 @@ abstract class Reunion {
     public List<Nota> Notas = new ArrayList<>();
     /**Constructor de reunion, recibe y asigna las variables previstas
      * @param organizador Empleado
-     * @param tipoReunion String
+     * @param tipoReunion tipoReunion
      * @param fecha Date
      * @param horaPrevista Instant
      * @param duracionPrevista Duration*/
-    public Reunion(Empleado organizador, String tipoReunion, Date fecha, Instant horaPrevista, Duration duracionPrevista) {
+    public Reunion(Empleado organizador, tipoReunion tipoReunion, Date fecha, Instant horaPrevista, Duration duracionPrevista) {
         this.organizador = organizador;
         this.tipoReunion = tipoReunion;
         this.fecha = fecha;
@@ -123,7 +123,7 @@ abstract class Reunion {
     }
     /**Getter del tipo de la reunión
      * @return tipo de la reunión*/
-    public String getTipoReunion() {
+    public tipoReunion getTipoReunion() {
         return tipoReunion;
     }
     /**Getter de la fecha
@@ -167,11 +167,6 @@ abstract class Reunion {
      * @param organizador Empleado*/
     public void setOrganizador(Empleado organizador) {
         this.organizador = organizador;
-    }
-    /**Setter del tipo de reunión
-     * @param tipoReunion String*/
-    public void setTipoReunion(String tipoReunion) {
-        this.tipoReunion = tipoReunion;
     }
     /**Setter de la fecha de la reunión
      * @param fecha Date*/
