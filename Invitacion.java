@@ -1,52 +1,40 @@
-package org.example;
-
+/**Invitación a una reunión
+ * @author Gustavo Benítez
+ * @version versión 2, 14 de mayo 2024*/
 import java.time.Instant;
-import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
 
 public class Invitacion {
-    private int idReunion;
-    private ArrayList<Integer> listaInvitados;
+    /**Empleado al que va dirigida la invitación*/
+    private Empleado invitado;
+    /**Hora de creación de la invitación*/
     private Instant hora;
-    private Reunion reunion;
-    private Invitable invitable;
-
-    public Invitacion(int idReunion, ArrayList<Integer> listaInvitados, Instant hora, Reunion reunion, Invitable invitable) {
-        this.idReunion = idReunion;
-        this.listaInvitados = listaInvitados;
-        this.hora = hora;
-        this.reunion = reunion;
-        this.invitable = invitable;
+    public Invitacion(Empleado invitado) {
+        this.invitado = invitado;
+        this.hora = Instant.now();
     }
-
-    public void enviarInvitacion() {
-        System.out.println("Invitación enviada a: " + listaInvitados);
-    }
-
-    public void actualizarInvitados(ArrayList<Integer> nuevosInvitados) {
-        this.listaInvitados = nuevosInvitados;
-        System.out.println("Lista actualizada: " + listaInvitados);
-    }
-
-    public ArrayList<Integer> obtenerListaInvitados() {
-        return listaInvitados;
-    }
-
-    public void agregarInvitado(int idEmpleado) {
-        this.listaInvitados.add(idEmpleado);
-        System.out.println("Agregado: " + idEmpleado);
-    }
-
-    public void eliminarInvitado(int idEmpleado) {
-        this.listaInvitados.remove(Integer.valueOf(idEmpleado));
-        System.out.println("Eliminado: " + idEmpleado);
-    }
-
-    // Getters y Setters para el atributo hora
+    /**Getter de la hora de la invitación
+     * @return hora a la que fue enviada*/
     public Instant getHora() {
         return hora;
     }
-
+    /**Getter del invitado en cuestion
+     * @return empleado invitado*/
+    public Empleado getInvitado() {
+        return invitado;
+    }
+    /**Setter de la hora de la invitación
+     * @param hora Instant*/
     public void setHora(Instant hora) {
         this.hora = hora;
+    }
+    /**Setter de la hora de la invitación
+     * @param invitado Empleado*/
+    public void setInvitado(Empleado invitado) {
+        this.invitado = invitado;
+    }
+    @Override
+    public String toString() {
+        return DateTimeFormatter.ofPattern("yyyy-MM-ddHH:mm:ss").format(hora);
     }
 }
