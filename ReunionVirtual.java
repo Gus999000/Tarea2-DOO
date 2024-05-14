@@ -7,13 +7,15 @@ import java.time.Duration;
 public class ReunionVirtual extends Reunion {
     /**String para almacenar el enlace de la reunión*/
     private String enlace;
-    /**Constructor de ReunionVirtual, recibe y asigna; la fecha de la reunión, la hora prevista, la duración prevista y el enlace de la reunión
+    /**Constructor de ReunionVirtual, recibe y asigna; el organizador, el tipo de reunión, la fecha de la reunión, la hora prevista, la duración prevista y el enlace de la reunión
+     * @param organizador Empleado
+     * @param tipoReunion String
      * @param fecha Date
      * @param horaPrevista Instant
      * @param duracionPrevista Duration
      * @param enlace String*/
-    public ReunionVirtual(Date fecha, Instant horaPrevista, Duration duracionPrevista, String enlace) {
-        super(fecha, horaPrevista, duracionPrevista);
+    public ReunionVirtual(Empleado organizador, String tipoReunion, Date fecha, Instant horaPrevista, Duration duracionPrevista, String enlace) {
+        super(organizador, tipoReunion, fecha, horaPrevista, duracionPrevista);
         this.enlace = enlace;
     }
     /**Getter del enlace de la reunión
