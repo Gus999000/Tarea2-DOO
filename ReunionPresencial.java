@@ -14,12 +14,12 @@ public class ReunionPresencial extends Reunion {
     private String sala;
     /**Constructor de ReunionPresencial, recibe y asigna; el organizador, el tipo de reunión, la fecha de la reunión, la hora prevista, la duración prevista y la sala de la reunión
      * @param organizador Empleado
-     * @param tipoReunion String
+     * @param tipoReunion tipoReunion
      * @param fecha Date
      * @param horaPrevista Instant
      * @param duracionPrevista Duration
      * @param sala String*/
-    public ReunionPresencial(Empleado organizador, String tipoReunion, Date fecha, Instant horaPrevista, Duration duracionPrevista, String sala) {
+    public ReunionPresencial(Empleado organizador, tipoReunion tipoReunion, Date fecha, Instant horaPrevista, Duration duracionPrevista, String sala) {
         super(organizador, tipoReunion, fecha, horaPrevista, duracionPrevista);
         this.sala = sala;
     }
@@ -30,7 +30,7 @@ public class ReunionPresencial extends Reunion {
             File Informe = new File("Informe.txt");
             FileWriter escrituraArchivo = new FileWriter(Informe);
             BufferedWriter escrituraBuffer = new BufferedWriter(escrituraArchivo);
-            escrituraBuffer.write("Fecha: " + fecha.toString() + "\n" + "Hora de la reunión: " + horaPrevista.toString() + "\n" + "Hora de inicio: " + horaInicio.toString() + "\n" + "Hora de fin: " + horaFin.toString() + "\n" + "Duración total: " + this.calcularTiempoReal() + "\n" + "Tipo de reunión: " + tipoReunion + "\n" + "Sala: " + sala + "\n");
+            escrituraBuffer.write("Fecha: " + fecha.toString() + "\n" + "Hora de la reunión: " + horaPrevista.toString() + "\n" + "Hora de inicio: " + horaInicio.toString() + "\n" + "Hora de fin: " + horaFin.toString() + "\n" + "Duración total: " + this.calcularTiempoReal() + "\n" + tipoReunion.toString() + "\n" + "Sala: " + sala + "\n");
             for(int i = 0; i < Invitados.size(); i = i + 1) {
                 escrituraBuffer.write(Invitados.get(i).toString() + "\n");
             }
