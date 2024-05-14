@@ -1,16 +1,12 @@
 /**Clase abstracta Reunion
  * @author Gustavo González
- * @version versión 3, 13 de mayo 2024
- * @see IOException*/
+ * @version versión 4, 14 de mayo 2024*/
 import java.util.Date;
 import java.time.Instant;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.File;
-import java.io.FileWriter;
 import java.time.temporal.ChronoField;
-import java.io.IOException;
 abstract class Reunion {
     /**Empleado organizador de la reunión*/
     protected Empleado organizador;
@@ -120,19 +116,6 @@ abstract class Reunion {
         Notas.add(N);
         return N;
     }
-    /**Método para crear el Informe como un archivo de texto
-     * @throws IOException lanza esta excepción si ocurre un error al crear el archivo*/
-    public void crearInforme() throws IOException {
-        try {
-            File Informe = new File("Informe.txt");
-            FileWriter escritura = new FileWriter(Informe);
-            escritura.write("HOLA");
-            escritura.close();
-        }
-        catch(IOException exception) {
-            System.out.println("Error al crear archivo");
-        }
-    }
     /**Getter del organizador
      * @return organizador de la reunión*/
     public Empleado getOrganizador() {
@@ -168,6 +151,28 @@ abstract class Reunion {
     public Instant getHoraFin() {
         return horaFin;
     }
+    /**Getter de la lista de invitados
+     * @param i int
+     * @return el invitado correspondiente al index(i)*/
+    public Empleado getInvitados(int i) {
+        return Invitados.get(i);
+    }
+    /**Getter de la lista de notas
+     * @param i int
+     * @return la nota correspondiente al index(i)*/
+    public Nota getNotas(int i) {
+        return Notas.get(i);
+    }
+    /**Setter del organizdor de la reunión
+     * @param organizador Empleado*/
+    public void setOrganizador(Empleado organizador) {
+        this.organizador = organizador;
+    }
+    /**Setter del tipo de reunión
+     * @param tipoReunion String*/
+    public void setTipoReunion(String tipoReunion) {
+        this.tipoReunion = tipoReunion;
+    }
     /**Setter de la fecha de la reunión
      * @param fecha Date*/
     public void setFecha(Date fecha) {
@@ -192,5 +197,17 @@ abstract class Reunion {
      * @param horaFin Instant*/
     public void setHoraFin(Instant horaFin) {
         this.horaFin = horaFin;
+    }
+    /**Setter de la lista de invitados
+     * @param i int
+     * @param E Empleado*/
+    public void setInvitados(int i, Empleado E) {
+        Invitados.set(i, E);
+    }
+    /**Setter de la lista de notas
+     * @param i int
+     * @param N Nota*/
+    public void setNotas(int i, Nota N) {
+        Notas.set(i, N);
     }
 }
