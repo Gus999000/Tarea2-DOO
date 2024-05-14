@@ -1,10 +1,9 @@
-import java.time.Duration;
-import java.time.Instant;
 import java.util.Date;
-
+import java.time.Instant;
+import java.time.Duration;
 /**Reunión presencial en una sala
  * @author Gustavo González
- * @version versión 3, 13 de mayo 2024*/
+ * @version versión 4, 14 de mayo 2024*/
 public class ReunionPresencial extends Reunion {
     /**String para almacenar la sala de la reunión*/
     private String sala;
@@ -26,5 +25,9 @@ public class ReunionPresencial extends Reunion {
      * @param sala String*/
     public void setSala(String sala) {
         this.sala = sala;
+    }
+    @Override
+    public String toString() {
+        return "Sala de la reunión: " + sala;
     }
 }
