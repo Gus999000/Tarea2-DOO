@@ -1,6 +1,6 @@
 /**Departamento de empleados
  * @author Gustavo González
- * @version versión 4, 14 de mayo 2024*/
+ * @version versión 5, 15 de mayo 2024*/
 import java.util.List;
 import java.util.ArrayList;
 public class Departamento implements Invitable {
@@ -21,6 +21,11 @@ public class Departamento implements Invitable {
             X.Invitados.add(miembros.get(i));
         }
         return I;
+    }
+    /**Método para añadir empleados al departamento
+     * @param E Empleado*/
+    public void addMiembros(Empleado E) {
+        miembros.add(E);
     }
     /**Getter del nombre del departamento
      * @return nombre del departamento*/
