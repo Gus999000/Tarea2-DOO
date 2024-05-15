@@ -1,9 +1,8 @@
 /**Invitación a una reunión
  * @author Gustavo Benítez
- * @version versión 2, 14 de mayo 2024*/
+ * @version versión 3, 14 de mayo 2024*/
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
-
 public class Invitacion {
     /**Empleado al que va dirigida la invitación*/
     private Empleado invitado;
@@ -35,6 +34,6 @@ public class Invitacion {
     }
     @Override
     public String toString() {
-        return DateTimeFormatter.ofPattern("yyyy-MM-ddHH:mm:ss").format(hora);
+        return "Empleado: " + invitado.toString() + "\n" + "Hora de la invitación: " + DateTimeFormatter.ofPattern("yyyy-MM-ddHH:mm:ss").format(hora);
     }
 }
