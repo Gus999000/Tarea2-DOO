@@ -22,16 +22,18 @@ class EmpleadoTest {
 
     @Test
     void invitar() {
-        Empleado E = new Empleado("50", "De La Barrera Ortiz", "Juan", "hola@gmail.com", true);
-        Empleado E1 = new Empleado("55", "González Villagra", "Franco", "chao@gmail.com", false);
+        Empleado E = new Empleado("25", "De La Barrera Ortiz", "Juan", "hola@gmail.com", true);
+        Empleado E1 = new Empleado("55", "Miranda Ortiz", "Franco", "chao@gmail.com", false);
+        Empleado E2 = new Empleado("69", "Cartes Ortiz", "Patricio", "ortiz@gmail.com", true);
         Date F = new Date();
         Instant HP = Instant.now();
         Duration DP = Duration.between(LocalTime.of(15, 10), LocalTime.of(18, 15));
         ReunionPresencial P = new ReunionPresencial(E, tipoReunion.MARKETING, F, HP, DP, "420");
         E.invitar(P);
         E1.invitar(P);
+        E2.invitar(P);
         int I = P.obtenerTotalAsistencia();
-        final int X = 1;
+        final int X = 2;
         Assertions.assertEquals(I, X);
     }
 }
