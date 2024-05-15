@@ -1,6 +1,6 @@
 /**Clase empleado
  * @author Gustavo González
- * @version versión 2, 14 de mayo 2024*/
+ * @version versión 3, 14 de mayo 2024*/
 public class Empleado implements Invitable {
     /**String para almacenar la identificación del empleado*/
     private String id;
@@ -83,6 +83,6 @@ public class Empleado implements Invitable {
     }
     @Override
     public String toString() {
-        return "Id :" + id + "Apellidos: " + apellidos + "Nombre: " + nombre + "Correo: " + correo + "Presencia: " + Boolean.toString(presencia);
+        return "Id :" + id + "\n" + "Apellidos: " + apellidos + "\n" + "Nombre: " + nombre + "\n" + "Correo: " + correo + "\n" + "Presencia: " + Boolean.toString(presencia);
     }
 }
