@@ -1,8 +1,8 @@
 /**Departamento de empleados
  * @author Gustavo González
- * @version versión 3, 14 de mayo 2024*/
-import java.util.ArrayList;
+ * @version versión 4, 14 de mayo 2024*/
 import java.util.List;
+import java.util.ArrayList;
 public class Departamento implements Invitable {
     /**Nombre del departamento*/
     private String nombre;
@@ -28,7 +28,7 @@ public class Departamento implements Invitable {
         return nombre;
     }
     /**Getter de la lista de miembros*/
-    public Empleado geMiembros(int i) {
+    public Empleado getMiembros(int i) {
         return miembros.get(i);
     }
     /**Setter del nombre del departamento
@@ -39,7 +39,15 @@ public class Departamento implements Invitable {
     /**Setter de la lista de miembros
      * @param i int
      * @param E Empleado*/
-    public void setMiembrosos(int i, Empleado E) {
+    public void setMiembros(int i, Empleado E) {
         miembros.set(i, E);
+    }
+    @Override
+    public String toString() {
+        String X = new String();
+        for(int i = 0; i < miembros.size(); i = i + 1) {
+            X = X + miembros.get(i).toString();
+        }
+        return "Nombre del departamento: " + nombre + "\n" + "Miembros: " + X;
     }
 }
